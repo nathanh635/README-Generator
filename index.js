@@ -15,6 +15,7 @@ const questions = ["What is the title of your project?",
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+  //get markdown text from generateMarkdown.js 
     const text = require('./utils/generateMarkdown.js')(data);
     fs.writeFile(fileName, text, (err) =>
     err ? console.error(err) : console.log('Readme file created!')
@@ -23,6 +24,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+  //initialize the inquirer module and ask questions
 inquirer
   .prompt([
     {

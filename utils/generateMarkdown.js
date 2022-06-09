@@ -6,16 +6,17 @@ function renderLicenseBadge(license) {
   if (license === "No License") {
     return "";
   } else {
-    if (license = "MIT"){
+    //ensure license name doesn't break the URL with spaces
+    if (license === "MIT"){
       licenseTag = "MIT"
-    } else if (license = 'GNU GPLv3') {
+    } else if (license === 'GNU GPLv3') {
       licenseTag = "GNU_GPLv3"
-    } else if (license = 'Apache 2.0') {
+    } else if (license === 'Apache 2.0') {
       licenseTag = "Apache_2.0"
     }
     }
-  }
-  badge = `https://img.shields.io/badge/license-${licenseTag}-blue`;
+  //get the badge and send it to the generateMarkdown function
+  badge = `![license description](https://img.shields.io/badge/license-${licenseTag}-blue)`;
   return badge;
   }
 
@@ -27,14 +28,16 @@ function renderLicenseLink(license) {
   if (license === "No License") {
     return "";
   } else  {
-    if (license = "MIT"){
+    //ensure the license name links correctly to the URL
+    if (license === "MIT"){
       licenseTag = "mit"
-    } else if (license = 'GNU GPLv3') {
+    } else if (license === 'GNU GPLv3') {
       licenseTag = "gpl-3.0"
-    } else if (license = 'Apache 2.0') {
+    } else if (license === 'Apache 2.0') {
       licenseTag = "apache-2.0"
     }
     }
+    //generate the correct link and send it to the generateMarkdown function
   licenseLink = `https://choosealicense.com/licenses/${licenseTag}/`;
   return licenseLink;
 }
@@ -44,7 +47,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   let licenseText = ""
   if (license === "No License") {
-    
+    return "There is no applicable license for this project."
   } else {
   licenseText = `This project is licensed under the ${license} license. Read more about the license here:`
   }
@@ -54,7 +57,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ![license description](${renderLicenseBadge(data.license)})
+  ${renderLicenseBadge(data.license)}
 
   ## Description
 

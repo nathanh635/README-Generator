@@ -3,7 +3,7 @@
 
   ## Description
 
-  The project is designed to generate a professional quality README.md file, based on user inputs. A series of prompts will get info from the user and will be relayed into a readme template.
+  The project is designed to generate a professional quality README.md file, based on user inputs. A series of prompts will get info from the user and will be relayed into a readme template. The README.md file will be generated under the utils folder.
 
 ## Table of Contents
 
