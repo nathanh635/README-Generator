@@ -13,6 +13,8 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Screenshots](#screenshots)
+- [Links](#links)
 
   ## Installation
 
@@ -39,5 +41,15 @@
   ## Questions
 
   You can reach me at GitHub; my username is nathanh635 and my profile is here: https://github.com/nathanh635. You can also email me at nathanh635@gmail.com. 
-  
 
+  ## Screenshots
+
+  Below are some screenshots of the application running and the generated README.md file. The example readme is also available under "./utils/exampleREADME.md".
+
+![license prompt](./assets/images/prompts-licenses.PNG)
+![completed prompts](./assets/images/completed-prompts.PNG)
+![generated readme](./assets/images/readme-generated.PNG)
+  
+## Links
+
+  Repository: https://github.com/nathanh635/README-Generator

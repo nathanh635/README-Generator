@@ -73,7 +73,7 @@ inquirer
       },
   ])
   .then((data) => {
-    writeToFile("README.md", data)
+    writeToFile("./utils/README.md", data)
   }
   );
 }

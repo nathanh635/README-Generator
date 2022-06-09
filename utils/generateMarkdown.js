@@ -5,8 +5,17 @@ function renderLicenseBadge(license) {
   let licenseTag = "";
   if (license === "No License") {
     return "";
-  } else {}
-  badge = `https://img.shields.io/badge/license-${license}-blue`;
+  } else {
+    if (license = "MIT"){
+      licenseTag = "MIT"
+    } else if (license = 'GNU GPLv3') {
+      licenseTag = "GNU_GPLv3"
+    } else if (license = 'Apache 2.0') {
+      licenseTag = "Apache_2.0"
+    }
+    }
+  }
+  badge = `https://img.shields.io/badge/license-${licenseTag}-blue`;
   return badge;
   }
 
@@ -37,7 +46,7 @@ function renderLicenseSection(license) {
   if (license === "No License") {
     
   } else {
-  licenseText = `This project is licensed under the ${license} license.`
+  licenseText = `This project is licensed under the ${license} license. Read more about the license here:`
   }
   return licenseText;
 }
@@ -84,7 +93,8 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  You can reach me at GitHub; my username is ${data.username} and my profile is here: https://github.com/${data.username}. You can also email me at ${data.email}. 
+  You can reach me at GitHub; my username is ${data.username} and my profile is here: https://github.com/${data.username}. 
+  You can also email me at ${data.email}. 
   
 
 `;
