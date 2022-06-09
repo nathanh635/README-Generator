@@ -2,8 +2,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-
-
 // TODO: Create an array of questions for user input
 const questions = ["What is the title of your project?",
 "Enter a description for your project:",
@@ -15,15 +13,17 @@ const questions = ["What is the title of your project?",
 "Enter your GitHub username:",
 "Enter your email address:"];
 
-
-
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const text = require('./utils/generateMarkdown.js')(data);
+    fs.writeFile(fileName, text, (err) =>
+    err ? console.error(err) : console.log('Readme file created!')
+  )
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
+inquirer
   .prompt([
     {
       type: 'input',
@@ -32,19 +32,49 @@ function init() {
     },
     {
       type: 'input',
-      message: 'What languages do you know?',
-      name: 'languages',
+      message: questions[1],
+      name: 'description',
     },
     {
       type: 'input',
-      message: 'What is your preferred means of communication?',
-      name: 'communication',
+      message: questions[2],
+      name: 'installation',
     },
+    {
+        type: 'input',
+        message: questions[3],
+        name: 'usage',
+      },
+      {
+        type: 'input',
+        message: questions[4],
+        name: 'contribution',
+      },
+      {
+        type: 'input',
+        message: questions[5],
+        name: 'testing',
+      },
+      {
+        type: 'list',
+        message: questions[6],
+        name: 'license',
+        choices: ['GNU GPLv3', 'Apache 2.0', 'MIT', 'No License'],
+      },
+      {
+        type: 'input',
+        message: questions[7],
+        name: 'username',
+      },
+      {
+        type: 'input',
+        message: questions[8],
+        name: 'email',
+      },
   ])
-  .then((response) =>
-fs.writeFile('README.md', JSON.stringify(response), (err) =>
-  err ? console.error(err) : console.log('Readme file created!')
-)
+  .then((data) => {
+    writeToFile("README.md", data)
+  }
   );
 }
 
