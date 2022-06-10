@@ -44,7 +44,7 @@
 
   ## Screenshots
 
-  Below are some screenshots of the application running and the generated README.md file. The example readme is also available under "./utils/exampleREADME.md".
+  Below are some screenshots of the application running and the generated README.md file. The example readme is also available as "./exampleREADME.md".
 
 ![license prompt](./assets/images/prompts-licenses.PNG)
 ![completed prompts](./assets/images/completed-prompts.PNG)
@@ -53,3 +53,5 @@
 ## Links
 
   Repository: https://github.com/nathanh635/README-Generator
+  Video Walkthrough: https://drive.google.com/drive/folders/1EgsL4t-Exp1ZUehaEIwEXGDr-bvPiE7_?usp=sharing
+  

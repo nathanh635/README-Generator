@@ -1,9 +1,9 @@
-# 1
+# Test Project
   ![license description](https://img.shields.io/badge/license-Apache_2.0-blue)
 
   ## Description
 
-  2
+  This project is a test to ensure that the program functions correctly.
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@
 
   ## Installation
 
-  3
+  User will need to install inquirer package via npm i inquirer prior to running code
 
   ## Usage
 
-  4
+  Answer the prompts and a README.md file will be generated according to your responses.
 
   ## License
 
@@ -30,15 +30,15 @@
 
   ## Contributing
 
-  5
+  Please fork the repository and submit a pull request.
 
   ## Tests
 
-  6
+  test using various inputs
 
   ## Questions
 
-  You can reach me at GitHub; my username is 1 and my profile is here: https://github.com/1. 
-  You can also email me at 2. 
+  You can reach me at GitHub; my username is nathanh635 and my profile is here: https://github.com/nathanh635. 
+  You can also email me at nathanh635@gmail.com. 
   
 
